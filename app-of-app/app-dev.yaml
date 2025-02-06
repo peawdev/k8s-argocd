@@ -8,7 +8,7 @@ spec:
   source:
     path: ./
     repoURL: git@github.com:peawdev/k8s-calculator-nonprd.git
-    targetRevision: develop
+    targetRevision: main
     helm:
       releaseName: app-chart-api-app-dev
       valueFiles:
