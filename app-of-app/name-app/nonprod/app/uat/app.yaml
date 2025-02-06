@@ -8,7 +8,7 @@ spec:
   source:
     path: ./
     repoURL: git@github.com:peawdev/k8s-calculator-nonprd.git
-    targetRevision: main
+    targetRevision: uat
     helm:
       releaseName: calculator-nonprd-uat
       valueFiles:
