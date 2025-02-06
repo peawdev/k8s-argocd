@@ -1,21 +1,21 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: app-chart-api-app
+  name: app-chart-api-app-uat
   namespace: argocd
 spec:
   project: default
   source:
     path: ./
     repoURL: git@github.com:peawdev/k8s-calculator-nonprd.git
-    targetRevision: develop
+    targetRevision: main
     helm:
-      releaseName: app-chart-api-app
+      releaseName: app-chart-api-app-uat
       valueFiles:
-        - ./values/dev.yaml
+        - ./values/uat.yaml
   destination:
     server: https://kubernetes.default.svc
-    namespace: app-chart-api-app
+    namespace: uat
   syncPolicy:
     automated:
       prune: true

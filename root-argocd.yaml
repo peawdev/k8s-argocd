@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: git@github.com:peawdev/k8s-argocd.git
     targetRevision: main
-    path: app-of-app
+    path: app-of-app/name-app/nonprod/app
     directory:
       recurse: true
   destination:
